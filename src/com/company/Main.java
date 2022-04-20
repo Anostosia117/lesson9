@@ -1,5 +1,5 @@
 package com.company;
-
+import java.util.Arrays;
 import java.time.LocalDate;
 
 public class Main {
@@ -9,11 +9,14 @@ public class Main {
         isYearLeap(year);
         int clientOS = 1;
         int currentYear = LocalDate.now().getYear();
-        getClientOS (clientOS, year);
+        getClientOS(clientOS, year);
         int deliveryDistance = 66;
         int deliveryDays = 1;
-        sumDistance (deliveryDistance, deliveryDays);
+        sumDistance(deliveryDistance, deliveryDays);
+        String letters = "aabccddefgghiijjkk";
+        getRepeat(letters);
     }
+
     public static void isYearLeap(int year) {
         if (year % 400 == 0) {
             System.out.println(year + " високосный год");
@@ -21,6 +24,7 @@ public class Main {
             System.out.println(year + " не високосный год");
         }
     }
+
     public static void getClientOS(int clientOS, int year) {
         if (clientOS == 0 && year >= 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке");
@@ -36,6 +40,7 @@ public class Main {
         }
 
     }
+
     public static void sumDistance(int deliveryDistance, int deliveryDays) {
         if (deliveryDistance <= 20) {
             System.out.println("Потребуется дней: " + deliveryDays);
@@ -46,12 +51,14 @@ public class Main {
         (deliveryDistance > 60 && deliveryDistance <= 100) {
             System.out.println("Потребуется дней: " + (deliveryDays + 2));
         }
-        // Здесь пишем код первого задания
     }
-    public static void task4() {
-        // Здесь пишем код первого задания
-    }
-    public static void task5() {
-        // Здесь пишем код первого задания
+
+    public static void getRepeat(String letters) {
+        for (int i = 0; i < letters.length() - 1; i++) {
+            if (letters.lastIndexOf(letters.charAt(i)) != i) {
+                System.out.print("В строке есть повторения буквы " + letters.charAt(i));
+            break;
+            }
+        }
     }
 }
