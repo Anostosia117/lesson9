@@ -10,6 +10,9 @@ public class Main {
         int clientOS = 1;
         int currentYear = LocalDate.now().getYear();
         getClientOS (clientOS, year);
+        int deliveryDistance = 66;
+        int deliveryDays = 1;
+        sumDistance (deliveryDistance, deliveryDays);
     }
     public static void isYearLeap(int year) {
         if (year % 400 == 0) {
@@ -33,7 +36,16 @@ public class Main {
         }
 
     }
-    public static void task3() {
+    public static void sumDistance(int deliveryDistance, int deliveryDays) {
+        if (deliveryDistance <= 20) {
+            System.out.println("Потребуется дней: " + deliveryDays);
+        } else if
+        (deliveryDistance > 20 && deliveryDistance <= 60) {
+            System.out.println("Потребуется дней: " + (deliveryDays + 1));
+        } else if
+        (deliveryDistance > 60 && deliveryDistance <= 100) {
+            System.out.println("Потребуется дней: " + (deliveryDays + 2));
+        }
         // Здесь пишем код первого задания
     }
     public static void task4() {
